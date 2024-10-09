@@ -48,3 +48,4 @@ jobs:
         ls
         cd hiddenfolder
         ls
+        cat test.txt
