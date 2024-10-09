@@ -33,6 +33,6 @@ jobs:
         if [ -f requirements.txt]; then pip install -r requirements.txt; fi
         pip install pytest
 
-    - name: begin test 
+    - name: Training with Pytest 
       run: |
         pytest
