@@ -5,7 +5,7 @@ on:
 
 jobs:
   builds:
-    runs-on: Ubuntu-16.04
+    runs-on: ubuntu-latest
 
     steps:
     - name: greeting steps
