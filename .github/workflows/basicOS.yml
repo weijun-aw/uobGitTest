@@ -40,8 +40,8 @@ jobs:
     - name: Checkout Hidden Repo
       uses: actions/checkout@v4
       with:
-        repository: lowkh/UOBHidden 
-        token: ${{ secrets.SECRETUOB}}
+        repository: weijun-aw/UOBHidden 
+        token: ${{ secrets.SECRETUOBTWO}}
 
     - name: print out hidden things
       run: |
