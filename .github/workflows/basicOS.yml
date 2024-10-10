@@ -49,13 +49,16 @@ jobs:
       uses: sebastianpopp/discord-action@releases/v2
       with:
         webhook: ${{ secrets.DISCORD_WEBHOOK }}
-        message: ${{ github.repository }} has been eat shit!!! deployed.
+        message: ${{ github.repository }} has chicken rice deployed.
 
-    - name: Deploy to Github Pages
+    - if: $(( success() ))
+      name: Deploy to Github Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GIT_TOKEN }}
         publish_dir: ./
+        message: You are amazing.
+        
 
 
 
