@@ -1,18 +1,3 @@
-name: Deploy
-on: push
-jobs:
-  deploy:
-    name: Deploy
-    runs-on: ubuntu-latest
-    steps:
-    - name: discord
-      uses: sebastianpopp/discord-action@releases/v2
-      with:
-        webhook: ${{ secrets.DISCORD_WEBHOOK }}
-        message: ${{ github.repository }} has been successfullly deployed.
-
-
-
 name: My Workflow File
 on:
   pull_request:
@@ -65,6 +50,12 @@ jobs:
         cd hiddenfolder
         ls
         cat test.txt
+
+    - name: discord
+      uses: sebastianpopp/discord-action@releases/v2
+      with:
+        webhook: ${{ secrets.DISCORD_WEBHOOK }}
+        message: ${{ github.repository }} has been successfullly deployed.
   
 
 
