@@ -57,12 +57,6 @@ jobs:
         github_token: ${{ secrets.GIT_TOKEN }}
         publish_dir: ./
 
-    - if: $(( success() ))
-      name: discord
-      uses: sebastianpopp/discord-action@releases/v2
-      with:
-        webhook: ${{ secrets.DISCORD_WEBHOOK }}
-        message: ${{ github.repository }} has duck rice deployed.
         
 
 
