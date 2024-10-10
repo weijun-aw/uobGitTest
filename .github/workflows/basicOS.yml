@@ -38,12 +38,12 @@ jobs:
       run: |
         pytest
 
-    - name: Checkout Hidden Repo
-      uses: actions/checkout@v4
-      with:
-        repository: weijun-aw/UOBHidden 
-        path: hiddenfolder
-        token: ${{ secrets.SECRETUOBTWO}}
+    #- name: Checkout Hidden Repo#
+    #  uses: actions/checkout@v4#
+    # with:#
+    #    repository: weijun-aw/UOBHidden #
+    #    path: hiddenfolder#
+    #    token: ${{ secrets.SECRETUOBTWO}}#
 
     - name: discord
       uses: sebastianpopp/discord-action@releases/v2
