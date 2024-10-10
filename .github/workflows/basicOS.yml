@@ -45,13 +45,6 @@ jobs:
         path: hiddenfolder
         token: ${{ secrets.SECRETUOBTWO}}
 
-    - name: print out hidden things
-      run: |
-        ls
-        cd hiddenfolder
-        ls
-        cat test.txt
-
     - name: discord
       uses: sebastianpopp/discord-action@releases/v2
       with:
