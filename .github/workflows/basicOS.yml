@@ -51,13 +51,18 @@ jobs:
         webhook: ${{ secrets.DISCORD_WEBHOOK }}
         message: ${{ github.repository }} has chicken rice deployed.
 
-    - if: $(( success() ))
-      name: Deploy to Github Pages
+    - name: Deploy to Github Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GIT_TOKEN }}
         publish_dir: ./
-        message: You are amazing.
+
+    - if: $(( success() ))
+      name: discord
+      uses: sebastianpopp/discord-action@releases/v2
+      with:
+        webhook: ${{ secrets.DISCORD_WEBHOOK }}
+        message: ${{ github.repository }} has duck rice deployed.
         
 
 
